@@ -14,9 +14,6 @@ JavaScript (si aplica en el ejercicio, o para futuras mejoras)
 Cómo Ejecutar el Proyecto
 Clona este repositorio en tu máquina local:
 
-bash
-Copiar
-Editar
 git clone https://github.com/alvaroAPDev/html-exercise-conquerblocks.git
 Abre el archivo index.html en tu navegador para ver la página en funcionamiento.
 
