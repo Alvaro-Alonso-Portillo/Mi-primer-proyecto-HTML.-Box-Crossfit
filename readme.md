@@ -20,17 +20,6 @@ Editar
 git clone https://github.com/alvaroAPDev/html-exercise-conquerblocks.git
 Abre el archivo index.html en tu navegador para ver la página en funcionamiento.
 
-Estructura del Proyecto
-bash
-Copiar
-Editar
-/html-exercise-conquerblocks
-│
-├── index.html        # Página principal con el código HTML
-├── styles.css        # Archivo de estilos CSS (si aplica)
-├── script.js         # Archivo JavaScript (si aplica)
-└── README.md         # Este archivo
-
 Agradecimientos
 Gracias a ConquerBlocks por proporcionar este módulo, que me permitió fortalecer mis conocimientos en HTML y comenzar mi camino como desarrollador web.
 
