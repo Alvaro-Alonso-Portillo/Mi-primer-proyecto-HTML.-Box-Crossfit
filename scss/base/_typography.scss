@@ -8,7 +8,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: $spacing-md;
   color: $color-secondary;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, $color-primary, $color-accent);
+    border-radius: 3px;
+  }
 }
 
 h1 {

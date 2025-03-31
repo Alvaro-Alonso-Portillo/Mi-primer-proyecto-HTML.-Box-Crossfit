@@ -2,9 +2,10 @@
 
 nav {
   background-color: $color-secondary;
-  padding: $spacing-sm 0;
+  padding: $spacing-md 0;
   border-top: 1px solid rgba($color-light, 0.1);
-  border-bottom: 3px solid $color-primary;
+  position: relative;
+  text-align: center;
   
   ul {
     @include flex(row, center, center, wrap);
@@ -18,19 +19,45 @@ nav {
       a {
         color: $color-light;
         text-decoration: none;
-        font-weight: $font-weight-semibold;
-        padding: $spacing-xs $spacing-sm;
-        border-radius: $border-radius-sm;
-        transition: all $transition-normal;
+        font-weight: $font-weight-bold;
+        padding: $spacing-sm $spacing-md;
+        border-radius: $border-radius-md;
+        transition: all 0.3s ease;
         display: inline-block;
+        position: relative;
+        margin: 0 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          background: $color-primary;
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+        }
         
         &:hover, &:focus {
-          background-color: $color-primary;
+          color: $color-accent;
           transform: translateY(-2px);
+          
+          &::after {
+            width: 80%;
+          }
         }
         
         &.active {
-          background-color: $color-primary;
+          color: $color-accent;
+          
+          &::after {
+            width: 80%;
+            background: $color-accent;
+          }
         }
       }
     }
