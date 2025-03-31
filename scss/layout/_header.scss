@@ -1,0 +1,38 @@
+// Header
+
+header {
+  background-color: $color-dark;
+  color: $color-light;
+  padding: $spacing-md 0;
+  box-shadow: $shadow-md;
+  position: relative;
+  z-index: 100;
+  background-image: linear-gradient(to right, darken($color-dark, 5%), $color-dark);
+  
+  figure {
+    text-align: center;
+    margin-bottom: $spacing-md;
+    
+    img {
+      max-width: 200px;
+      margin: 0 auto;
+      transition: transform $transition-normal;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  @include respond-to(md) {
+    padding: $spacing-sm 0;
+    
+    figure {
+      margin-bottom: $spacing-sm;
+      
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}

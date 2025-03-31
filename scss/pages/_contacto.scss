@@ -1,0 +1,161 @@
+// Página de contacto
+
+.contact-section {
+  padding: $spacing-xxl 0;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .contact-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto $spacing-xl;
+    
+    p {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// Contenedor de contacto
+.contact-container {
+  @include grid(2, $spacing-xl);
+  
+  @include respond-to(md) {
+    @include grid(1, $spacing-lg);
+  }
+}
+
+// Formulario de contacto
+.contact-form {
+  @include card;
+  
+  h2 {
+    margin-bottom: $spacing-lg;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+    
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-group {
+      &.full-width {
+        grid-column: 1 / -1;
+      }
+    }
+    
+    .form-actions {
+      grid-column: 1 / -1;
+      margin-top: $spacing-md;
+      display: flex;
+      justify-content: flex-start;
+      
+      .btn {
+        min-width: 150px;
+      }
+    }
+  }
+}
+
+// Información de contacto
+.contact-info {
+  @include card;
+  
+  h2 {
+    margin-bottom: $spacing-lg;
+  }
+  
+  .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: $spacing-md;
+      
+      .icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        margin-right: $spacing-sm;
+        color: $color-primary;
+      }
+      
+      .content {
+        h3 {
+          font-size: $font-size-md;
+          margin-bottom: $spacing-xs;
+        }
+        
+        p {
+          margin: 0;
+          color: $color-gray-dark;
+        }
+        
+        a {
+          color: $color-primary;
+          text-decoration: none;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .social-links {
+    margin-top: $spacing-lg;
+    
+    h3 {
+      margin-bottom: $spacing-md;
+    }
+    
+    .links {
+      display: flex;
+      gap: $spacing-sm;
+      
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba($color-primary, 0.1);
+        color: $color-primary;
+        border-radius: $border-radius-circle;
+        transition: all $transition-normal;
+        
+        &:hover {
+          background-color: $color-primary;
+          color: $color-light;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+// Mapa
+.contact-map {
+  margin-top: $spacing-xl;
+  height: 400px;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

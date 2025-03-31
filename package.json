@@ -1,5 +1,5 @@
 {
-  "name": " ",
+  "name": "box-crossfit",
   "version": "0.0.1",
   "description": "",
   "private": true,
@@ -11,7 +11,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "sass": "node-sass scss/main.scss css/style.css --output-style compressed",
+    "sass:watch": "node-sass scss/main.scss css/style.css --output-style compressed --watch"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",

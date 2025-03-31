@@ -1,0 +1,203 @@
+// Página de tarifas
+
+.pricing-section {
+  padding: $spacing-xxl 0;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .pricing-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto $spacing-xl;
+    
+    p {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// Planes de precios
+.pricing-plans {
+  @include grid(3, $spacing-xl);
+  margin-bottom: $spacing-xl;
+  
+  @include respond-to(md) {
+    @include grid(2, $spacing-lg);
+  }
+  
+  @include respond-to(sm) {
+    @include grid(1, $spacing-md);
+  }
+}
+
+.pricing-plan {
+  @include card;
+  text-align: center;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  border: 1px solid $color-gray-light;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md;
+  }
+  
+  // Plan destacado
+  &.featured {
+    border-color: $color-primary;
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: $shadow-md;
+    
+    .plan-header {
+      background-color: $color-primary;
+      
+      h3 {
+        color: $color-light;
+      }
+    }
+    
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $color-primary;
+      color: $color-light;
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-xs;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      letter-spacing: 1px;
+      transform: translateX(30%) translateY(-10%) rotate(45deg);
+      transform-origin: top left;
+      width: 150px;
+      text-align: center;
+    }
+    
+    &:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+  }
+  
+  // Encabezado del plan
+  .plan-header {
+    padding: $spacing-md;
+    margin: -$spacing-md -$spacing-md $spacing-md;
+    background-color: rgba($color-primary, 0.1);
+    border-bottom: 1px solid rgba($color-primary, 0.2);
+    
+    h3 {
+      margin-bottom: 0;
+      color: $color-primary;
+      font-size: $font-size-xl;
+    }
+  }
+  
+  // Precio
+  .plan-price {
+    font-size: $font-size-xxxl;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+    margin: $spacing-md 0;
+    
+    .currency {
+      font-size: $font-size-lg;
+      vertical-align: super;
+      margin-right: $spacing-xs;
+    }
+    
+    .period {
+      font-size: $font-size-sm;
+      color: $color-gray-dark;
+      font-weight: $font-weight-regular;
+      display: block;
+      margin-top: $spacing-xs;
+    }
+  }
+  
+  // Características
+  .plan-features {
+    margin: $spacing-md 0;
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        padding: $spacing-xs 0;
+        border-bottom: 1px solid $color-gray-light;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  
+  // Pie del plan
+  .plan-footer {
+    margin-top: $spacing-lg;
+    
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+// Sección de preguntas frecuentes
+.pricing-faq {
+  margin-top: $spacing-xxl;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .faq-grid {
+    @include grid(2, $spacing-xl);
+    
+    @include respond-to(md) {
+      @include grid(1, $spacing-lg);
+    }
+  }
+  
+  .faq-item {
+    margin-bottom: $spacing-lg;
+    
+    h3 {
+      color: $color-secondary;
+      margin-bottom: $spacing-sm;
+      font-size: $font-size-lg;
+      position: relative;
+      padding-left: $spacing-lg;
+      
+      &:before {
+        content: "Q:";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-primary;
+        font-weight: $font-weight-bold;
+      }
+    }
+    
+    p {
+      padding-left: $spacing-lg;
+      position: relative;
+      
+      &:before {
+        content: "A:";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-accent;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

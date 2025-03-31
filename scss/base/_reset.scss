@@ -1,0 +1,123 @@
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-md;
+  line-height: 1.6;
+  color: $color-secondary;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-normal;
+  
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: $font-primary;
+  border: none;
+  background: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+// Eliminar estilos de lista por defecto
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Eliminar bordes en tablas
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Hacer que los elementos de formulario hereden la fuente
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+// Eliminar estilos de botones en iOS y Safari
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
+  -webkit-appearance: button;
+}
+
+// Corregir el estilo de los botones en Firefox
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+// Restaurar el estilo de enfoque
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+// Corregir el padding en Firefox
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+// Corregir el estilo de texto en Edge e IE
+input {
+  overflow: visible;
+}
+
+// Eliminar el borde vertical en Chrome, Firefox y Opera
+progress {
+  vertical-align: baseline;
+}
+
+// Corregir el estilo de selección de texto
+::selection {
+  background-color: rgba($color-primary, 0.2);
+  color: $color-secondary;
+}

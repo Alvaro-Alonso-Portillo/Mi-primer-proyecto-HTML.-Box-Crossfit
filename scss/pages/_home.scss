@@ -1,0 +1,243 @@
+// Página de inicio
+
+// Hero section
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  background-image: url('../img/home/banner-home.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-light;
+  text-align: center;
+  box-shadow: $shadow-lg;
+  border-bottom: 5px solid $color-primary;
+  
+  &:before {
+    @include overlay;
+    content: '';
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: $spacing-lg;
+    
+    h1 {
+      font-size: $font-size-xxxl * 1.5;
+      margin-bottom: $spacing-md;
+      color: $color-light;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      
+      @include respond-to(md) {
+        font-size: $font-size-xxxl;
+      }
+      
+      @include respond-to(sm) {
+        font-size: $font-size-xxl;
+      }
+    }
+    
+    p {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-lg;
+      
+      @include respond-to(md) {
+        font-size: $font-size-lg;
+      }
+    }
+    
+    .btn {
+      margin: 0 $spacing-xs;
+      
+      @include respond-to(sm) {
+        margin-bottom: $spacing-sm;
+      }
+    }
+  }
+}
+
+// Sección de introducción
+.intro-section {
+  padding: $spacing-xxl 0;
+  text-align: center;
+  
+  h2 {
+    margin-bottom: $spacing-lg;
+  }
+  
+  p {
+    max-width: 800px;
+    margin: 0 auto $spacing-lg;
+    font-size: $font-size-lg;
+  }
+  
+  .btn {
+    margin-top: $spacing-md;
+  }
+}
+
+// Sección de actividades destacadas
+.featured-activities {
+  background-color: $color-background;
+  padding: $spacing-xxl 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .activities-grid {
+    @include grid(3, $spacing-lg);
+    margin-bottom: $spacing-xl;
+    
+    @include respond-to(md) {
+      @include grid(2, $spacing-md);
+    }
+    
+    @include respond-to(sm) {
+      @include grid(1, $spacing-md);
+    }
+  }
+  
+  .activity-card {
+    @include card;
+    text-align: center;
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    overflow: hidden;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-md;
+    }
+    
+    .activity-img {
+      height: 200px;
+      margin: -$spacing-md -$spacing-md $spacing-md;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform $transition-normal;
+      }
+      
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+    
+    h3 {
+      margin-bottom: $spacing-sm;
+      color: $color-primary;
+    }
+    
+    p {
+      margin-bottom: $spacing-md;
+      color: $color-gray-dark;
+    }
+    
+    .btn {
+      margin-top: $spacing-sm;
+    }
+  }
+  
+  .view-all {
+    text-align: center;
+    margin-top: $spacing-lg;
+  }
+}
+
+// Sección de testimonios
+.testimonials {
+  padding: $spacing-xxl 0;
+  background-color: rgba($color-primary, 0.05);
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .testimonial {
+    text-align: center;
+    padding: $spacing-lg;
+    
+    .testimonial-content {
+      font-size: $font-size-lg;
+      font-style: italic;
+      margin-bottom: $spacing-lg;
+      position: relative;
+      
+      &:before, &:after {
+        content: '"';
+        font-size: $font-size-xxxl;
+        color: rgba($color-primary, 0.3);
+        position: absolute;
+      }
+      
+      &:before {
+        top: -$spacing-md;
+        left: -$spacing-md;
+      }
+      
+      &:after {
+        bottom: -$spacing-xl;
+        right: -$spacing-md;
+      }
+    }
+    
+    .testimonial-author {
+      .author-img {
+        width: 80px;
+        height: 80px;
+        border-radius: $border-radius-circle;
+        overflow: hidden;
+        margin: 0 auto $spacing-sm;
+        border: 3px solid $color-primary;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      .author-name {
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+        margin-bottom: $spacing-xs;
+      }
+      
+      .author-title {
+        font-size: $font-size-sm;
+        color: $color-gray-dark;
+      }
+    }
+  }
+}
+
+// Sección de estadísticas
+.stats-section {
+  padding: $spacing-xxl 0;
+  background-color: $color-dark;
+  color: $color-light;
+
+  .stats-grid {
+    @include grid(4, $spacing-lg);
+    
+    @include respond-to(md) {
+      // Your responsive code here
+    }
+  }
+}

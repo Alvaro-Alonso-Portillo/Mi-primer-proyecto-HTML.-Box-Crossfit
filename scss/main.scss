@@ -1,0 +1,26 @@
+// Main Sass file
+
+// Importar parciales
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';
+@import 'layout/grid';
+
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+
+@import 'pages/home';
+@import 'pages/quienes-somos';
+@import 'pages/actividades';
+@import 'pages/blog';
+@import 'pages/contacto';
+@import 'pages/tarifa';
+@import 'pages/horario';
+@import 'pages/login-registro';

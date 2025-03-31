@@ -1,0 +1,96 @@
+// Footer
+
+footer {
+  background-color: $color-dark;
+  color: $color-light;
+  padding: $spacing-xl 0 $spacing-lg;
+  margin-top: $spacing-xxl;
+  background-image: linear-gradient(to bottom, $color-dark, darken($color-dark, 5%));
+  border-top: 3px solid $color-primary;
+  
+  .footer-content {
+    @include grid(4, $spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    
+    @include respond-to(lg) {
+      @include grid(2, $spacing-lg);
+    }
+    
+    @include respond-to(sm) {
+      @include grid(1, $spacing-lg);
+    }
+  }
+  
+  .footer-column {
+    h4 {
+      color: $color-light;
+      margin-bottom: $spacing-md;
+      padding-bottom: $spacing-xs;
+      border-bottom: 2px solid $color-primary;
+      display: inline-block;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        margin-bottom: $spacing-xs;
+        
+        a {
+          color: $color-gray-light;
+          text-decoration: none;
+          transition: color $transition-normal;
+          
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    
+    p {
+      color: $color-gray-light;
+      margin-bottom: $spacing-sm;
+    }
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: $spacing-xl;
+    padding-top: $spacing-md;
+    border-top: 1px solid rgba($color-light, 0.1);
+    font-size: $font-size-sm;
+    color: $color-gray-medium;
+    
+    a {
+      color: $color-gray-light;
+      text-decoration: none;
+      
+      &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .social-links {
+    @include flex(row, center, center);
+    margin-top: $spacing-md;
+    
+    a {
+      color: $color-light;
+      margin: 0 $spacing-sm;
+      font-size: $font-size-xl;
+      transition: all $transition-normal;
+      
+      &:hover {
+        color: $color-primary;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
